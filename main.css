@@ -1,0 +1,128 @@
+@import url(https://github.com/Jay-yoon10/font/tree/main/GmarketSansOTF);
+@import url(https://github.com/Jay-yoon10/font/tree/main/GmarketSansTTF);
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: GmarketSansMedium;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #363b48;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+#logo {
+  color: #e1f3f5;
+  font-size: 36px;
+  font-weight: 600;
+  margin-left: -20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f0eee9;
+  font-size: 36px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 28px 5px;
+}
+
+nav ul li a {
+  color: #c2bfb5;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 450;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #363b48;
+  background: #e4d9afe8;
+}
+
+nav .menu-btn i {
+  color: #c2bfb5;
+  font-size: 20px;
+  cursor: hand;
+  display: none;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  nav .menu-btn i {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+
+  #click:checked ~ .menu-btn i::before {
+    content: "\f00d";
+  }
+
+  nav ul {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #f0eee9;
+    transition: all 0.4s ease;
+  }
+
+  #click:checked ~ ul {
+    left: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+  }
+
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+
+  nav ul li a.active, nav ul li a:hover {
+    background: none;
+    color: #363b48;
+    font-weight: 800;
+  }
+}
