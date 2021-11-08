@@ -25,17 +25,18 @@
 .home {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to bottom right, #716f81 0%, #f2e1c1 20%, #b97a95 40%, #6c5b7b 60%, #f6ae99 100%);
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, #f2e1c1 5%, #716f81 10%, #35477d 40%, #2d4059 60%);
   background-size: 200% 200%;
-  animation: movingGradient 10s linear infinite alternate;
+  animation: movingGradient 20s linear infinite alternate;
 }
 .home__logo {
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-size: 120px;
   margin-top: 250px;
-  color: #2d4059;
+  color: #f2e1c1;
 }
 .home__logo--border {
   text-align: center;
@@ -43,9 +44,6 @@
   height: 390px;
   padding-top: 70px;
   border: 5px solid #f2e1c1;
-  background-color: #f5f5f510;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
   border-radius: 20px;
 }
 .home__logo--second {
@@ -63,26 +61,29 @@
   flex-direction: column;
 }
 
-@media (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   .home__logo--border {
     width: 80vw;
-    height: 60vh;
+    height: 40vh;
   }
 }
-@media (max-width: 880px) {
+@media only screen and (max-width: 992px) {
   .home__logo {
+    font-size: 100px;
     margin-top: 200px;
   }
   .home__logo--second {
+    font-size: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   .home__logo--border {
-    height: 60vh;
+    width: 80vw;
+    height: 40vh;
   }
 }
-@media (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .home__logo {
     margin-top: 200px;
   }
@@ -94,6 +95,7 @@
   }
   .home__logo--border {
     height: 40vh;
+    width: 80vw;
   }
   .home__logo--first {
     font-size: 80px;
@@ -154,12 +156,12 @@ input[type=checkbox] {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   nav .menu-btn i {
     padding: 30px 20px;
   }
 }
-@media (max-width: 920px) {
+@media only screen and (max-width: 992px) {
   nav {
     display: flex;
     align-items: center;
@@ -212,4 +214,46 @@ nav ul li a:hover {
     color: #716f81;
     font-weight: 800;
   }
+}
+.about {
+  display: grid;
+  grid-template-areas: "chef chef c-para" "chef chef c-para" "cl-para cloud cloud" "cl-para cloud cloud" "Jay Jay J-para" "Jay Jay J-para";
+}
+
+#chef-img {
+  grid-area: chef;
+  height: 400px;
+  width: 300px;
+}
+
+#cloud-img {
+  grid-area: cloud;
+  height: 500px;
+  width: 700px;
+}
+
+#jay-img {
+  grid-area: Jay;
+  width: 400px;
+}
+
+#para1 {
+  grid-area: c-para;
+  border: 2px solid #f2e1c1;
+  width: 200px;
+  height: 400px;
+}
+
+#para2 {
+  grid-area: cl-para;
+  border: 2px solid #f2e1c1;
+  width: 200px;
+  height: 400px;
+}
+
+#para3 {
+  grid-area: J-para;
+  border: 2px solid #f2e1c1;
+  width: 200px;
+  height: 400px;
 }
