@@ -10,7 +10,7 @@ $seventh-color: #6c5b7b;
 $name-color: #f5f5f5;
 // fonts
 @import url(https://github.com/Jay-yoon10/font/tree/main/Consolas-Font);
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 // mixin
 
@@ -18,7 +18,7 @@ $name-color: #f5f5f5;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Consolas;
+    font-family: 'Ubuntu', sans-serif;
 }
 @keyframes movingGradient {
     from {
@@ -29,7 +29,7 @@ $name-color: #f5f5f5;
     }
 }
 #logo {
-    letter-spacing: -4px;
+    letter-spacing: -3px;
     color: $name-color;
     font-size: 40px;
 }
@@ -38,6 +38,7 @@ $name-color: #f5f5f5;
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-image: linear-gradient(
         to bottom right,
         $second-color 5%,
@@ -51,24 +52,19 @@ $name-color: #f5f5f5;
     &__logo {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         font-size: 120px;
-        margin-top: 250px;
         color: $second-color;
-
-        &--border {
+        &--first{
             text-align: center;
-            width: 1000px;
-            height: 390px;
-            padding-top: 70px;
-            border: 5px solid $second-color;
-            border-radius: 20px;
         }
         &--second {
             font-size: 80px;
+            font-weight: 200;
         }
         &--name {
             margin: 10px;
-            font-weight: 530;
+            font-weight: 430;
         }
     }
 }
@@ -82,37 +78,30 @@ $name-color: #f5f5f5;
 
 @include media.laptop {
     .home__logo {
-        &--border {
-            width: 80vw;
-            height: 40vh;
-        }
+        display: flex;
     }
 }
 @include media.tablet-landscape {
     .home__logo {
         font-size: 100px;
-        margin-top: 200px;
-
+        
+        justify-content: center;
         &--second {
             font-size: 70px;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
         }
-        &--border {
-            width: 80vw;
-            height: 40vh;
-        }
+      
     }
 }
 @include media.tablet {
     .home__logo {
-        margin-top: 200px;
+        
 
         &--second {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
             font-size: 60px;
         }
         &--border {
@@ -120,7 +109,7 @@ $name-color: #f5f5f5;
             width: 80vw;
         }
         &--first {
-            font-size: 80px;
+            font-size: 90px;
         }
     }
 }
@@ -129,7 +118,7 @@ nav {
     display: flex;
     height: 80px;
     width: 100%;
-    background: $fifth-color;
+    background: #2d4059;
     justify-content: space-between;
     padding: 0 50px 0 100px;
     flex-wrap: wrap;
@@ -159,7 +148,7 @@ nav ul li a {
     letter-spacing: 1px;
     text-decoration: none;
     font-size: 23px;
-    font-weight: 600;
+    font-weight: 400;
     transition: all 0.3s ease;
 }
 
@@ -233,27 +222,106 @@ input[type="checkbox"] {
     }
 }
 
-.about {
-    display: grid;
-    grid-template-areas:
-        "chef chef c-para"
-        "chef chef c-para"
-        "cl-para cloud cloud"
-        "cl-para cloud cloud"
-        "Jay Jay J-para"
-        "Jay Jay J-para";
+.about{
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            to bottom right,
+            $primary-color 10%,
+            $fifth-color 5%,
+            $fifth-color 40%,
+            $sixth-color 80%
+        );
+        background-size: 200% 200%;
+        animation: movingGradient 20s linear infinite alternate;
+        
+        &__heading{
+            padding-top: 30px;
+            font-size: 50px;
+            color:#f5f5f5cc;
+            text-align: center;
+            text-decoration: underline;
+
+        } 
+        &__chef{
+            margin-top: 100px;
+           display: flex;
+           justify-content: center;
+            &--para{
+                font-size: 20px;
+                width: 400px;
+                padding-top: 40px;
+                margin-left:  40px;
+                color:#f5f5f5cc;
+                
+            }
+        }
+        &__journey{
+           display: flex;
+           flex-direction: column-reverse;
+           align-items: center;
+           justify-content: space-evenly;
+            &--para{
+                font-size: 20px;
+                width: 1000px;
+                margin: 60px;
+                color:#f5f5f5cc;
+
+            }
+        }
+        &__last{
+            margin-top:40px;
+            display: flex;
+            justify-content: center;
+            &--para{
+                font-size: 20px;
+                margin: 40px;
+                width: 300px;
+                color:#f5f5f5cc;
+
+            }
+        }
+
 }
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "1 1 . ."
+    "1 1 1 ."
+    ". 2 2 2"
+    "2 2 2 2 "
+    "3 3 . ."
+    "3 3 3 .";
+    gap: 20px;
+    
+}  
+#first-section{
+    grid-area: 1;
+}
+#second-section{
+    grid-area: 2;
+}
+#third-section{
+    grid-area: 3;
+}   
+
 
 #chef-img {
-    grid-area: chef;
-    height: 400px;
-    width: 300px;
+    height: 350px;
+    width: 600px;
+    
+    border-radius: 20px;
 }
 #cloud-img {
-    grid-area: cloud;
+    
     height: 500px;
-    width: 700px;
+    width: 900px;
+    border-radius: 20px;
+
 }
 #jay-img {
-    grid-area: Jay;
+   
+    width: 500px;
+    border-radius: 20px;
+
 }

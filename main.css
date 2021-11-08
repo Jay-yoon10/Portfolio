@@ -1,11 +1,11 @@
 @import url(https://github.com/Jay-yoon10/font/tree/main/Consolas-Font);
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Consolas;
+  font-family: "Ubuntu", sans-serif;
 }
 
 @keyframes movingGradient {
@@ -17,7 +17,7 @@
   }
 }
 #logo {
-  letter-spacing: -4px;
+  letter-spacing: -3px;
   color: #f5f5f5;
   font-size: 40px;
 }
@@ -27,6 +27,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: linear-gradient(to bottom right, #f2e1c1 5%, #716f81 10%, #35477d 40%, #2d4059 60%);
   background-size: 200% 200%;
   animation: movingGradient 20s linear infinite alternate;
@@ -34,24 +35,20 @@
 .home__logo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: 120px;
-  margin-top: 250px;
   color: #f2e1c1;
 }
-.home__logo--border {
+.home__logo--first {
   text-align: center;
-  width: 1000px;
-  height: 390px;
-  padding-top: 70px;
-  border: 5px solid #f2e1c1;
-  border-radius: 20px;
 }
 .home__logo--second {
   font-size: 80px;
+  font-weight: 200;
 }
 .home__logo--name {
   margin: 10px;
-  font-weight: 530;
+  font-weight: 430;
 }
 
 .nav-bar__logo {
@@ -62,35 +59,26 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .home__logo--border {
-    width: 80vw;
-    height: 40vh;
+  .home__logo {
+    display: flex;
   }
 }
 @media only screen and (max-width: 992px) {
   .home__logo {
     font-size: 100px;
-    margin-top: 200px;
+    justify-content: center;
   }
   .home__logo--second {
     font-size: 70px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-  }
-  .home__logo--border {
-    width: 80vw;
-    height: 40vh;
   }
 }
 @media only screen and (max-width: 768px) {
-  .home__logo {
-    margin-top: 200px;
-  }
   .home__logo--second {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     font-size: 60px;
   }
   .home__logo--border {
@@ -98,7 +86,7 @@
     width: 80vw;
   }
   .home__logo--first {
-    font-size: 80px;
+    font-size: 90px;
   }
 }
 nav {
@@ -135,7 +123,7 @@ nav ul li a {
   letter-spacing: 1px;
   text-decoration: none;
   font-size: 23px;
-  font-weight: 600;
+  font-weight: 400;
   transition: all 0.3s ease;
 }
 
@@ -216,44 +204,86 @@ nav ul li a:hover {
   }
 }
 .about {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #716f81 10%, #2d4059 5%, #2d4059 40%, #35477d 80%);
+  background-size: 200% 200%;
+  animation: movingGradient 20s linear infinite alternate;
+}
+.about__heading {
+  padding-top: 30px;
+  font-size: 50px;
+  color: #f5f5f5cc;
+  text-align: center;
+  text-decoration: underline;
+}
+.about__chef {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.about__chef--para {
+  font-size: 20px;
+  width: 400px;
+  padding-top: 40px;
+  margin-left: 40px;
+  color: #f5f5f5cc;
+}
+.about__journey {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.about__journey--para {
+  font-size: 20px;
+  width: 1000px;
+  margin: 60px;
+  color: #f5f5f5cc;
+}
+.about__last {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.about__last--para {
+  font-size: 20px;
+  margin: 40px;
+  width: 300px;
+  color: #f5f5f5cc;
+}
+
+.grid-container {
   display: grid;
-  grid-template-areas: "chef chef c-para" "chef chef c-para" "cl-para cloud cloud" "cl-para cloud cloud" "Jay Jay J-para" "Jay Jay J-para";
+  grid-template-areas: "1 1 . ." "1 1 1 ." ". 2 2 2" "2 2 2 2 " "3 3 . ." "3 3 3 .";
+  gap: 20px;
+}
+
+#first-section {
+  grid-area: 1;
+}
+
+#second-section {
+  grid-area: 2;
+}
+
+#third-section {
+  grid-area: 3;
 }
 
 #chef-img {
-  grid-area: chef;
-  height: 400px;
-  width: 300px;
+  height: 350px;
+  width: 600px;
+  border-radius: 20px;
 }
 
 #cloud-img {
-  grid-area: cloud;
   height: 500px;
-  width: 700px;
+  width: 900px;
+  border-radius: 20px;
 }
 
 #jay-img {
-  grid-area: Jay;
-  width: 400px;
-}
-
-#para1 {
-  grid-area: c-para;
-  border: 2px solid #f2e1c1;
-  width: 200px;
-  height: 400px;
-}
-
-#para2 {
-  grid-area: cl-para;
-  border: 2px solid #f2e1c1;
-  width: 200px;
-  height: 400px;
-}
-
-#para3 {
-  grid-area: J-para;
-  border: 2px solid #f2e1c1;
-  width: 200px;
-  height: 400px;
+  width: 500px;
+  border-radius: 20px;
 }
