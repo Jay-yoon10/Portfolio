@@ -11,14 +11,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
 <body>
-  <header class="home">
+  <header>
     <nav class="nav-bar">
-      <div class="menu-list">
+      <div class="nav-bar__logo">
         <h3 class="name">
           <a id="logo" href="./main.html" class="menu-bar">Jy</a>
         </h3>
       </div>
-    
       <div>
         <input type="checkbox" id="click">
           <label for="click" class="menu-btn">
@@ -26,25 +25,73 @@
           </label>  
         <ul>
           <li><a  href="./main.html">HOME</a></li>
-          <li><a href="./about.html">ABOUT</a></li>
+          <li><a  href="./about.html">ABOUT</a></li>
           <li><a class="active" href="./tech.html">TECH_SKILLS</a></li>
           <li><a  href="./project.html">PROJECTS</a></li>
           <li><a href="./contact.html">CONTACT</a></li>
         </ul>
       </div>
     </nav>
+    </header>
+    <main id="tech">
       
-      <div class="home__logo">
-        <section class="home__logo--border">
-        <div class="home__logo--first"> 
-          <span class="home__name">Jay Yoon</span>
-        </div> 
-        <div class="home__logo--second">
-          <span class="home__name home__job">Software </span>
-          <span class="home__name home__job">Developer</span>
+      <div class="tech-box">
+        
+        <div class="box">
+        <details id="git" class="tech-box__icon">
+          <summary  class="fab fa-github tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
+        </div>    
+        <div class="box">
+        <details id="js" class="tech-box__icon">
+          <summary  class="fab fa-js tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
         </div>
-        </section>
-      </div>  
-  </header>
+        <div class="box">
+        <details id="java" class="tech-box__icon">
+          <summary class="fab fa-java tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
+        </div>
+        <div class="box">      
+        <details id="react" class="tech-box__icon">
+          <summary  class="fab fa-react tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
+        </div>
+        <div class="box">    
+        <details id="aws" class="tech-box__icon">
+          <summary class="fab fa-aws tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
+      </div>
+        <div class="box">     
+        <details id="windows" class="tech-box__icon">
+          <summary  class="fab fa-windows tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
+        </div>
+        <div class="box">     
+        <details id="apple" class="tech-box__icon">
+          <summary  class="fab fa-apple tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
+        </div>
+        <div class="box">   
+        <details id="html" class="tech-box__icon">
+          <summary  class="fab fa-html5 tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
+        </div>
+        <div class="box">  
+        <details id="css" class="tech-box__icon">
+          <summary  class="fab fa-css3  tech-box__icon--summary"></summary>
+          <p>content</p>
+        </details>
+        </div>
+    </div>
+  </main>
 </body>
 </html>

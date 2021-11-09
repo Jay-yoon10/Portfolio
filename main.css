@@ -8,18 +8,11 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-@keyframes movingGradient {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 100%;
-  }
-}
 #logo {
   letter-spacing: -3px;
-  color: #f5f5f5;
+  color: #45a29e;
   font-size: 40px;
+  font-weight: 500;
 }
 
 .home {
@@ -28,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom right, #f2e1c1 5%, #716f81 10%, #35477d 40%, #2d4059 60%);
+  background-image: linear-gradient(to bottom right, #f2e1c1 5%, #c5c6c7 10%, #0b0c10 40%, #1f2833 60%);
   background-size: 200% 200%;
   animation: movingGradient 20s linear infinite alternate;
 }
@@ -37,7 +30,7 @@
   flex-direction: column;
   justify-content: center;
   font-size: 120px;
-  color: #f2e1c1;
+  color: #45a29e;
 }
 .home__logo--first {
   text-align: center;
@@ -45,12 +38,39 @@
 .home__logo--second {
   font-size: 80px;
   font-weight: 200;
+  margin: 10px;
+  font-weight: 430;
+  background: linear-gradient(to bottom right, #1f2833 20%, #c5c6c7 40%, #f2e1c1 60%, #45a29e 80%, #66fcf1 90%);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textGradient 32s ease-in-out infinite;
 }
 .home__logo--name {
   margin: 10px;
   font-weight: 430;
+  background: linear-gradient(to bottom right, #1f2833 20%, #c5c6c7 40%, #f2e1c1 60%, #45a29e 80%, #66fcf1 90%);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textGradient 32s ease-in-out infinite;
 }
 
+@keyframes textGradient {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes movingGradient {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
 .nav-bar__logo {
   display: flex;
   align-items: center;
@@ -93,7 +113,7 @@ nav {
   display: flex;
   height: 80px;
   width: 100%;
-  background: #2d4059;
+  background: #1f2833;
   justify-content: space-between;
   padding: 0 50px 0 100px;
   flex-wrap: wrap;
@@ -101,7 +121,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #f5f5f5;
+  color: #45a29e;
   font-size: 36px;
   font-weight: 450;
 }
@@ -117,7 +137,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #f2e1c1;
+  color: #45a29e;
   padding: 8px 15px;
   border-radius: 5px;
   letter-spacing: 1px;
@@ -129,7 +149,7 @@ nav ul li a {
 
 nav ul li a.active,
 nav ul li a:hover {
-  color: #2d4059;
+  color: #1f2833;
   background: #f2e1c1;
 }
 
@@ -172,7 +192,7 @@ input[type=checkbox] {
     position: fixed;
     top: 80px;
     left: -100%;
-    background: #2d4059;
+    background: #1f2833;
     transition: all 0.4s ease;
   }
 
@@ -199,14 +219,14 @@ input[type=checkbox] {
   nav ul li a.active,
 nav ul li a:hover {
     background: none;
-    color: #716f81;
+    color: #f2e1c1;
     font-weight: 800;
   }
 }
 .about {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom right, #716f81 10%, #2d4059 5%, #2d4059 40%, #35477d 80%);
+  background-image: linear-gradient(to bottom right, #f2e1c1 5%, #c5c6c7 10%, #0b0c10 40%, #1f2833 60%);
   background-size: 200% 200%;
   animation: movingGradient 20s linear infinite alternate;
 }
@@ -286,4 +306,84 @@ nav ul li a:hover {
 #jay-img {
   width: 500px;
   border-radius: 20px;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-box {
+  margin-top: 150px;
+  display: grid;
+  grid-template-areas: " html css js " " java react aws " " github windows apple ";
+  gap: 10px;
+}
+
+.tech-box__icon {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  text-align: center;
+}
+.tech-box__icon--summary {
+  margin-top: 40%;
+  font-size: 50px;
+  background: linear-gradient(to bottom right, #1f2833 20%, #c5c6c7 40%, #f2e1c1 60%, #45a29e 80%, #66fcf1 90%);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textGradient 32s ease-in-out infinite;
+}
+
+#html {
+  grid-area: html;
+}
+
+#css {
+  grid-area: css;
+}
+
+#js {
+  grid-area: js;
+}
+
+#java {
+  grid-area: java;
+}
+
+#react {
+  grid-area: react;
+}
+
+#apple {
+  grid-area: apple;
+}
+
+#windows {
+  grid-area: windows;
+}
+
+#aws {
+  grid-area: aws;
+}
+
+#git {
+  grid-area: github;
 }

@@ -1,16 +1,16 @@
 @use "./partials/devices" as media;
 // color pallete
-$primary-color: #716f81;
+$primary-color: #c5c6c7;
 $second-color: #f2e1c1;
 $third-color: #b97a95;
-$fourth-color: #f6ae99;
-$fifth-color: #2d4059;
-$sixth-color: #35477d;
+$fourth-color: #66fcf1;
+$fifth-color: #1f2833;
+$sixth-color: #0b0c10;
 $seventh-color: #6c5b7b;
-$name-color: #f5f5f5;
+$name-color: #45a29e;
 // fonts
 @import url(https://github.com/Jay-yoon10/font/tree/main/Consolas-Font);
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 // mixin
 
@@ -18,20 +18,14 @@ $name-color: #f5f5f5;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
-@keyframes movingGradient {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 100%;
-    }
-}
+
 #logo {
     letter-spacing: -3px;
     color: $name-color;
     font-size: 40px;
+    font-weight: 500;
 }
 .home {
     width: 100%;
@@ -54,21 +48,64 @@ $name-color: #f5f5f5;
         flex-direction: column;
         justify-content: center;
         font-size: 120px;
-        color: $second-color;
-        &--first{
+        color: $name-color;
+
+        &--first {
             text-align: center;
         }
         &--second {
             font-size: 80px;
             font-weight: 200;
+            margin: 10px;
+            font-weight: 430;
+            background: linear-gradient(
+                to bottom right,
+                $fifth-color 20%,
+                $primary-color 40%,
+                $second-color 60%,
+                $name-color 80%,
+                $fourth-color 90%
+            );
+            background-size: 200%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+            animation: textGradient 32s ease-in-out infinite;
         }
         &--name {
             margin: 10px;
             font-weight: 430;
+            background: linear-gradient(
+                to bottom right,
+                $fifth-color 20%,
+                $primary-color 40%,
+                $second-color 60%,
+                $name-color 80%,
+                $fourth-color 90%
+            );
+            background-size: 200%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+            animation: textGradient 32s ease-in-out infinite;
         }
     }
 }
-
+@keyframes textGradient {
+    to {
+        background-position: 200% center;
+    }
+}
+@keyframes movingGradient {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
 .nav-bar__logo {
     display: flex;
     align-items: center;
@@ -84,19 +121,16 @@ $name-color: #f5f5f5;
 @include media.tablet-landscape {
     .home__logo {
         font-size: 100px;
-        
+
         justify-content: center;
         &--second {
             font-size: 70px;
             justify-content: center;
         }
-      
     }
 }
 @include media.tablet {
     .home__logo {
-        
-
         &--second {
             display: flex;
             flex-direction: column;
@@ -118,7 +152,7 @@ nav {
     display: flex;
     height: 80px;
     width: 100%;
-    background: #2d4059;
+    background: $fifth-color;
     justify-content: space-between;
     padding: 0 50px 0 100px;
     flex-wrap: wrap;
@@ -142,7 +176,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: $second-color;
+    color: $name-color;
     padding: 8px 15px;
     border-radius: 5px;
     letter-spacing: 1px;
@@ -217,111 +251,180 @@ input[type="checkbox"] {
     nav ul li a.active,
     nav ul li a:hover {
         background: none;
-        color: $primary-color;
+        color: $second-color;
         font-weight: 800;
     }
 }
 
-.about{
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(
-            to bottom right,
-            $primary-color 10%,
-            $fifth-color 5%,
-            $fifth-color 40%,
-            $sixth-color 80%
-        );
-        background-size: 200% 200%;
-        animation: movingGradient 20s linear infinite alternate;
-        
-        &__heading{
-            padding-top: 30px;
-            font-size: 50px;
-            color:#f5f5f5cc;
-            text-align: center;
-            text-decoration: underline;
+.about {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom right,
+        $second-color 5%,
+        $primary-color 10%,
+        $sixth-color 40%,
+        $fifth-color 60%
+    );
+    background-size: 200% 200%;
+    animation: movingGradient 20s linear infinite alternate;
 
-        } 
-        &__chef{
-            margin-top: 100px;
-           display: flex;
-           justify-content: center;
-            &--para{
-                font-size: 20px;
-                width: 400px;
-                padding-top: 40px;
-                margin-left:  40px;
-                color:#f5f5f5cc;
-                
-            }
+    &__heading {
+        padding-top: 30px;
+        font-size: 50px;
+        color: #f5f5f5cc;
+        text-align: center;
+        text-decoration: underline;
+    }
+    &__chef {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        &--para {
+            font-size: 20px;
+            width: 400px;
+            padding-top: 40px;
+            margin-left: 40px;
+            color: #f5f5f5cc;
         }
-        &__journey{
-           display: flex;
-           flex-direction: column-reverse;
-           align-items: center;
-           justify-content: space-evenly;
-            &--para{
-                font-size: 20px;
-                width: 1000px;
-                margin: 60px;
-                color:#f5f5f5cc;
-
-            }
+    }
+    &__journey {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        &--para {
+            font-size: 20px;
+            width: 1000px;
+            margin: 60px;
+            color: #f5f5f5cc;
         }
-        &__last{
-            margin-top:40px;
-            display: flex;
-            justify-content: center;
-            &--para{
-                font-size: 20px;
-                margin: 40px;
-                width: 300px;
-                color:#f5f5f5cc;
-
-            }
+    }
+    &__last {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        &--para {
+            font-size: 20px;
+            margin: 40px;
+            width: 300px;
+            color: #f5f5f5cc;
         }
-
+    }
 }
-.grid-container{
+.grid-container {
     display: grid;
-    grid-template-areas: 
-    "1 1 . ."
-    "1 1 1 ."
-    ". 2 2 2"
-    "2 2 2 2 "
-    "3 3 . ."
-    "3 3 3 .";
+    grid-template-areas:
+        "1 1 . ."
+        "1 1 1 ."
+        ". 2 2 2"
+        "2 2 2 2 "
+        "3 3 . ."
+        "3 3 3 .";
     gap: 20px;
-    
-}  
-#first-section{
+}
+#first-section {
     grid-area: 1;
 }
-#second-section{
+#second-section {
     grid-area: 2;
 }
-#third-section{
+#third-section {
     grid-area: 3;
-}   
-
+}
 
 #chef-img {
     height: 350px;
     width: 600px;
-    
+
     border-radius: 20px;
 }
 #cloud-img {
-    
     height: 500px;
     width: 900px;
     border-radius: 20px;
-
 }
 #jay-img {
-   
     width: 500px;
     border-radius: 20px;
+}
 
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tech-box {
+    margin-top: 150px;
+    display: grid;
+    grid-template-areas:
+        " html css js "
+        " java react aws "
+        " github windows apple ";
+    gap: 10px;
+}
+.tech-box__icon {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center;
+
+    &--summary {
+        margin-top: 40%;
+        font-size: 50px;
+        background: linear-gradient(
+            to bottom right,
+            $fifth-color 20%,
+            $primary-color 40%,
+            $second-color 60%,
+            $name-color 80%,
+            $fourth-color 90%
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+        animation: textGradient 32s ease-in-out infinite;
+    }
+}
+.box {
+}
+#html {
+    grid-area: html;
+}
+#css {
+    grid-area: css;
+}
+#js {
+    grid-area: js;
+}
+#java {
+    grid-area: java;
+}
+#react {
+    grid-area: react;
+}
+#apple {
+    grid-area: apple;
+}
+#windows {
+    grid-area: windows;
+}
+#aws {
+    grid-area: aws;
+}
+#git {
+    grid-area: github;
 }

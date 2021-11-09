@@ -1,0 +1,6 @@
+1. Create all pages.
+2. arrange the codes.
+3. Add some additional effects.
+4. Change the color (can try change the gradient of name as well)
+5. break down scss file into small pieces.
+6. tech skills -> icons -> https://fontawesome.com/v5.15/icons?d=gallery&p=2
