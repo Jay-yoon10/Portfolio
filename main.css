@@ -326,10 +326,15 @@ details {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #f2e1c1 5%, #c5c6c7 10%, #0b0c10 40%, #1f2833 60%);
+  background-size: 200% 200%;
+  animation: movingGradient 20s linear infinite alternate;
 }
 
 .tech-box {
-  margin-top: 150px;
+  margin: 150px;
   display: grid;
   grid-template-areas: " html css js " " java react aws " " github windows apple ";
   gap: 10px;
@@ -338,13 +343,14 @@ details {
 .tech-box__icon {
   width: 200px;
   height: 200px;
-  border: 2px solid black;
+  border: 2px solid #45a29e;
   text-align: center;
+  border-radius: 35%;
 }
 .tech-box__icon--summary {
-  margin-top: 40%;
-  font-size: 50px;
-  background: linear-gradient(to bottom right, #1f2833 20%, #c5c6c7 40%, #f2e1c1 60%, #45a29e 80%, #66fcf1 90%);
+  margin-top: 25%;
+  font-size: 80px;
+  background: linear-gradient(to bottom right, #1f2833 20%, #c5c6c7 40%, #f2e1c1 60%, #45a29e 80%, #45a29e 90%);
   background-size: 200%;
   background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -312,6 +312,7 @@ input[type="checkbox"] {
         }
     }
 }
+
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -364,9 +365,20 @@ details {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom right,
+        $second-color 5%,
+        $primary-color 10%,
+        $sixth-color 40%,
+        $fifth-color 60%
+    );
+    background-size: 200% 200%;
+    animation: movingGradient 20s linear infinite alternate;
 }
 .tech-box {
-    margin-top: 150px;
+    margin: 150px;
     display: grid;
     grid-template-areas:
         " html css js "
@@ -377,19 +389,20 @@ details {
 .tech-box__icon {
     width: 200px;
     height: 200px;
-    border: 2px solid black;
+    border: 2px solid $name-color;
     text-align: center;
+    border-radius: 35%;
 
     &--summary {
-        margin-top: 40%;
-        font-size: 50px;
+        margin-top: 25%;
+        font-size: 80px;
         background: linear-gradient(
             to bottom right,
             $fifth-color 20%,
             $primary-color 40%,
             $second-color 60%,
             $name-color 80%,
-            $fourth-color 90%
+            $name-color 90%
         );
         background-size: 200%;
         background-clip: text;
@@ -399,8 +412,7 @@ details {
         animation: textGradient 32s ease-in-out infinite;
     }
 }
-.box {
-}
+
 #html {
     grid-area: html;
 }
