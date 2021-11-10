@@ -18,17 +18,9 @@
 .home {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to bottom right, #f2e1c1 5%, #c5c6c7 10%, #0b0c10 40%, #1f2833 60%);
-  background-size: 200% 200%;
-  animation: movingGradient 20s linear infinite alternate;
 }
 .home__logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 14%;
   font-size: 120px;
   color: #45a29e;
 }
@@ -36,6 +28,7 @@
   text-align: center;
 }
 .home__logo--second {
+  text-align: center;
   font-size: 80px;
   font-weight: 200;
   margin: 10px;
@@ -56,6 +49,59 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: textGradient 32s ease-in-out infinite;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+.stars,
+.twinkling {
+  width: 100%;
+  height: 100%;
+}
+
+.stars {
+  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index: 0;
+}
+
+.twinkling {
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index: 1;
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
 }
 
 @keyframes textGradient {
@@ -80,20 +126,22 @@
 
 @media only screen and (max-width: 1200px) {
   .home__logo {
-    display: flex;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 992px) {
   .home__logo {
     font-size: 100px;
-    justify-content: center;
+    text-align: center;
   }
   .home__logo--second {
     font-size: 70px;
-    justify-content: center;
   }
 }
 @media only screen and (max-width: 768px) {
+  .home__logo {
+    padding-right: 0px;
+  }
   .home__logo--second {
     display: flex;
     flex-direction: column;
@@ -103,7 +151,6 @@
   }
   .home__logo--border {
     height: 40vh;
-    width: 80vw;
   }
   .home__logo--first {
     font-size: 90px;
@@ -218,9 +265,9 @@ input[type=checkbox] {
 
   nav ul li a.active,
 nav ul li a:hover {
-    background: none;
     color: #f2e1c1;
     font-weight: 800;
+    background: none;
   }
 }
 .about {
@@ -236,7 +283,6 @@ nav ul li a:hover {
   font-size: 50px;
   color: #f5f5f5cc;
   text-align: center;
-  text-decoration: underline;
 }
 .about__chef {
   margin-top: 100px;
@@ -309,32 +355,19 @@ nav ul li a:hover {
   border-radius: 20px;
 }
 
-details > summary {
-  list-style: none;
-}
-
-details > summary::-webkit-details-marker {
-  display: none;
-}
-
-details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .tech__heading {
   padding-top: 90px;
   text-shadow: 3px 3px 3px #45a29e;
   font-size: 50px;
   color: #f5f5f5cc;
   text-align: center;
-  text-decoration: underline;
+  display: flex;
 }
 
-#tech {
+.tech {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   width: 100%;
   height: 100vh;
@@ -344,71 +377,224 @@ details {
 }
 
 .tech-box {
-  margin: 150px;
-  display: grid;
-  grid-template-areas: "html css js" "java react aws" "github os sql";
-  gap: 50px;
-  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+
+.row {
+  margin: 30px;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  margin-right: 40px;
+  cursor: pointer;
 }
 
 .tech-box__icon {
-  width: 150px;
-  height: 150px;
-  border: 4px solid #45a29e;
+  background-color: #fff;
+  position: absolute;
+  bottom: 80%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 30px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.tech-box__icon::after {
+  content: "";
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  margin-left: 5%;
+}
+
+.tech i {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 10%;
+  color: #fff;
+  font-size: 70px;
+  margin: 40px;
+}
+
+.tooltip:hover .tech-box__icon {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.github:hover i {
+  background-color: #211f1f;
+}
+
+.git {
+  background-color: #211f1f;
+  color: whitesmoke;
+}
+
+.javascript:hover i {
+  background-color: #323330;
+  color: #f0db4f;
+}
+
+.js {
+  color: #f0db4f;
+  background-color: #323330;
+}
+
+.java:hover i {
+  background-color: #5382a1;
+  color: #f89820;
+}
+
+.jv {
+  background-color: #5382a1;
+  color: #f89820;
+}
+
+.react:hover i {
+  color: #60dafb;
+  background-color: #1f232a;
+}
+
+.rt {
+  color: #60dafb;
+  background-color: #1f232a;
+}
+
+.amazon:hover i {
+  color: #ff9900;
+  background-color: #232f3e;
+}
+
+.aws {
+  color: #ff9900;
+  background-color: #232f3e;
   text-align: center;
-  border-radius: 50%;
-  background-color: #ffffff10;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
-}
-.tech-box__icon--summary {
-  margin-top: 25%;
-  font-size: 50px;
-  background: linear-gradient(to bottom right, #1f2833 20%, #c5c6c7 40%, #f2e1c1 60%, #45a29e 80%, #45a29e 90%);
-  background-size: 200%;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: textGradient 30s ease-in-out infinite;
 }
 
-#html {
-  grid-area: html;
+.operation:hover i {
+  background-color: #ffb900;
+  color: #00a4ef;
 }
 
-#css {
-  grid-area: css;
+.os {
+  color: #f25022;
+  background-color: #7fba00;
 }
 
-#js {
-  grid-area: js;
+.database:hover i {
+  background-color: #f29111;
+  color: #00758f;
 }
 
-#java {
-  grid-area: java;
+.sql {
+  color: #00758f;
+  background-color: #f29111;
 }
 
-#react {
-  grid-area: react;
+.html5:hover i {
+  background-color: #e34c26;
+  color: #ebebeb;
 }
 
-#sql {
-  grid-area: sql;
+.html {
+  background-color: #e34c26;
+  color: #ebebeb;
 }
 
-#os {
-  grid-area: os;
+.scss:hover i {
+  background-color: #3c99dc;
+  color: #d5f3fe;
 }
 
-#aws {
-  grid-area: aws;
+.css {
+  color: #3c99dc;
+  background-color: #d5f3fe;
 }
 
-#git {
-  grid-area: github;
+.project {
+  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #f2e1c1 5%, #c5c6c7 10%, #0b0c10 40%, #1f2833 60%);
+  background-size: 200% 200%;
+  animation: movingGradient 20s linear infinite alternate;
 }
 
-.box p {
+.card {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 300px;
+  height: 300px;
+  margin: -150px;
+  float: left;
+  perspective: 500px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  line-height: 300px;
+  color: #45a29e;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #1f2833;
   color: #f2e1c1;
-  font-size: 14px;
+  transform: rotateY(180deg);
+}
+
+.card2 {
+  left: 60%;
+}
+
+.card3 {
+  left: 40%;
+  top: 60%;
+}
+
+.card4 {
+  left: 60%;
+  top: 60%;
+}
+
+.card5 {
+  left: 40%;
+  top: 90%;
+}
+
+.card6 {
+  left: 60%;
+  top: 90%;
 }
