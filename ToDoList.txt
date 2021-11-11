@@ -4,3 +4,6 @@
 4. Change the color (can try change the gradient of name as well)
 5. break down scss file into small pieces.
 6. tech skills -> icons -> https://fontawesome.com/v5.15/icons?d=gallery&p=2
+7. reponsiveness
+8. shape of cards(project) + add icons(github&live link)
+9.
