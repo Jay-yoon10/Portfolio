@@ -1,0 +1,123 @@
+@use "../partials/devices" as media;
+@use "../partials/color.scss" as color;
+@use "../styles/nav.scss";
+
+#logo {
+    letter-spacing: -3px;
+    color: color.$name-color;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+
+    &__logo {
+        animation: pulsate 15s ease-out infinite alternate;
+        padding-top: 14%;
+        font-size: 120px;
+        color: color.$name-color;
+
+        &--first {
+            text-align: center;
+        }
+        &--second {
+            text-align: center;
+            font-size: 80px;
+            font-weight: 200;
+            margin: 10px;
+            font-weight: 430;
+            background: linear-gradient(
+                to bottom right,
+                color.$fifth-color 20%,
+                color.$primary-color 40%,
+                color.$second-color 60%,
+                color.$name-color 80%,
+                color.$fourth-color 90%
+            );
+            background-size: 200%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+            animation: textGradient 24s ease-in-out infinite;
+        }
+        &--name {
+            margin: 10px;
+            font-weight: 430;
+            background: linear-gradient(
+                to bottom right,
+                color.$fifth-color 20%,
+                color.$primary-color 40%,
+                color.$second-color 60%,
+                color.$name-color 80%,
+                color.$fourth-color 90%
+            );
+            background-size: 200%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+            animation: textGradient 20s ease-in-out infinite;
+        }
+    }
+}
+
+.nav-bar__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@include media.laptop {
+    .home__logo {
+        text-align: center;
+    }
+}
+@include media.tablet-landscape {
+    .home__logo {
+        font-size: 100px;
+        text-align: center;
+        &--second {
+            font-size: 70px;
+        }
+    }
+}
+@include media.tablet {
+    .home__logo {
+        padding-right: 0px;
+
+        &--second {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 60px;
+        }
+        &--border {
+            height: 40vh;
+        }
+        &--first {
+            font-size: 90px;
+        }
+    }
+}
+
+@keyframes pulsate {
+    20% {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.719), 0 0 11px #fff,
+            0 0 19px #fff, 0 0 20px rgba(255, 255, 255, 0.719),
+            0 0 20px rgba(255, 255, 255, 0.719),
+            0 0 26px rgba(255, 255, 255, 0.719),
+            0 0 30px rgba(255, 255, 255, 0.719),
+            0 0 35px rgba(255, 255, 255, 0.719);
+    }
+
+    5% {
+        text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff,
+            0 0 38px #062c43, 0 0 73px #530f1e, 0 0 80px #a44322,
+            0 0 94px #f8bc04, 0 0 1200px #76101e;
+    }
+}

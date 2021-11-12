@@ -1,0 +1,176 @@
+@use "../partials/devices" as media;
+@use "../partials/color.scss" as color;
+@use "../styles/nav.scss";
+
+.contact {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.jay_img {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+#contactImg {
+    border-radius: 45%;
+    width: 400px;
+    height: 560px;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+    box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: -10px;
+}
+
+.jay_img:hover #contactImg {
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.jay_img .glow-effect {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: -10px;
+}
+.jay_img .glow {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.jay_img:hover .glow {
+    transform: rotate(45deg) translate(450%, 0);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.jay_img:hover #contactImg,
+.jay_img:hover .glow-effect {
+    margin-top: 0;
+}
+.contact_name {
+    font-size: 60px;
+    position: absolute;
+    z-index: 1;
+    transform: translate(35%, -75%);
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 3px 3px 3px color.$name-color;
+    color: #f5f5f5cc;
+}
+.contact-heading {
+    padding-top: 90px;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+        0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+    font-size: 80px;
+    color: #f5f5f5cc;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(28, 255, 179, 0.73);
+}
+.contact-source {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    outline: none;
+
+    a {
+        text-decoration: none;
+        font-size: 70px;
+        margin: 50px;
+    }
+}
+.mail {
+    color: color.$primary-color;
+}
+.linkedin {
+    color: white;
+    background-color: #0077b5;
+    padding: -5px;
+    border-radius: 5px;
+}
+.a_style {
+    color: rgb(248, 248, 178);
+    text-decoration: none;
+    transition: 1s;
+}
+.a_style:hover {
+    text-shadow: 0 0 0.1em, 0 0 0.3em;
+}
+@media only screen and (max-width: 950px) {
+    .contact-heading {
+        transform: scale(0.75);
+    }
+}
+@include media.phone {
+    .jay_img {
+        transform: scale(0.5);
+        top: 30%;
+        left: 0%;
+    }
+    .contact-source {
+        transform: scale(0.5);
+        position: absolute;
+        top: 70%;
+        right: 0%;
+    }
+}
+@include media.tablet {
+    .jay_img {
+        transform: scale(0.4);
+        top: 18%;
+        left: 8%;
+    }
+    .contact-source {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: scale(0.5);
+        top: 18%;
+        left: 50%;
+    }
+}
+
+@include media.tablet-landscape {
+    .jay_img {
+        transform: scale(0.4);
+        top: 20%;
+        left: 15%;
+    }
+    .contact-source {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: scale(0.5);
+        top: 20%;
+        left: 50%;
+    }
+}
+
+@include media.laptop {
+    .contact-heading {
+        transform: scale(0.75);
+    }
+}
+@include media.desktop {
+    .jay_img {
+        transform: scale(0.9);
+        top: 30%;
+        left: 15%;
+    }
+    .contact-source {
+        transform: scale(0.7);
+        top: 50%;
+    }
+}
