@@ -977,6 +977,9 @@ section .title {
     line-height: 38px;
   }
 
+  .projects__div--content .card .box .used-lang {
+    font-size: 15px;
+  }
   .projects__div--content .card i {
     transform: scale(0.5);
   }

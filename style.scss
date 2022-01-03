@@ -260,6 +260,12 @@ section .title {
         &__div {
             &--content {
                 .card {
+                    .box {
+                        .used-lang {
+                            font-size: 15px;
+                        }
+                    }
+
                     i {
                         transform: scale(0.5);
                     }
