@@ -39,12 +39,13 @@
                 </div>
             </div>
         </nav>
+        <main>
         <div class="stars">
             <div class="twinkling">
                 <!-- home section -->
                 <section class="home" id="home">
                     <div class="home__div section-div">
-                        <div class="home__div--content home-content">
+                        <div class="home__div--content">
                             <div class="home__div--content-text1 text-1">
                                 Hello, my name is
                             </div>
@@ -54,7 +55,7 @@
                             <div class="home__div--content-text3 text-3">
                                 And I'm a <span class="typing"></span>
                             </div>
-                            <a href="#">Hire me</a>
+                            <a href="mailto:yeojoon.yoon10@gmail.com">Contact Me</a>
                         </div>
                     </div>
                 </section>
@@ -63,7 +64,7 @@
                 <section class="about" id="about">
                     <div class="about__div section-div">
                         <h2 class="title">About me</h2>
-                        <div class="about__div--content about-content">
+                        <div class="about__div--content">
                             <div class="column left">
                                 <img src="./img/myPhoto.jpg" alt="" />
                             </div>
@@ -74,7 +75,7 @@
                                         >and I'm a Software Developer</span
                                     >
                                 </div>
-                                <p>
+                                <p class="p1">
                                     Two years ago, I was a chef who enjoyed
                                     creating something physically and felt
                                     satisfaction in customers savouring what I
@@ -86,6 +87,7 @@
                                     inside my head regarding what it takes to
                                     become a software developer.
                                 </p>
+                                </br>
                                 <p>
                                     My new journey began with the recent
                                     COVID-19 pandemic, a period that would be
@@ -103,6 +105,8 @@
                                     developer training program conducted by the
                                     _nology.
                                 </p>
+                            </br>
+
                                 <p>
                                     Whilst I still have some shortcomings, my
                                     experience of working at several large
@@ -110,56 +114,101 @@
                                     accumulated as a chef have thoroughly
                                     equipped me for the new journey to come.
                                 </p>
-                                <a href="#">Download CV</a>
+                                <a href="/img/JayYoon.pdf">Download CV</a>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- services section -->
-                <section class="projects" id="services">
+                <section class="projects" id="projects">
                     <div class="projects__div section-div">
                         <h2 class="title">My Project</h2>
-                        <div class="projects__div--content slider owl-carousel serv-content">
+                        <div class="projects__div--content slider owl-carousel">
                             <div class="card">
                                 <div class="box img">
                                     <div class="text">Calculator</div>
                                     <img src="./img/calculator.png" alt="">
-                                    <i class="fas fa-play"></i>
-                                    <a href="https://github.com/Jay-yoon10/Calculator">
-                                    <i class="fas fa-code"></i>
-                                    </a>
-
+                                    <div class="icons">
+                                        <div class="used-lang">
+                                            <p></p>
+                                            &lt;&nbsp;&nbsp;&nbsp;<i class="fab fa-js-square js"></i>
+                                            <i class="fab fa-html5 html"></i>
+                                            <i class="fab fa-css3-alt css"></i> &sol;&gt;
+                                            <p></p>
+                                        </div>
+                                        <div>
+                                            <span>Git|</span>
+                                            <a href="https://github.com/Jay-yoon10/Calculator">
+                                            <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="box img">
                                     <div class="text">Morse Code</div>
-                                     <img src="./img/morsecode.png" alt="">
-                                    <i class="fas fa-play"></i>
-                                    <a href="https://github.com/Jay-yoon10/MorseCode_Project">
-                                    <i class="fas fa-code"></i>
-                                    </a>
+                                    <img src="./img/morsecode.png" alt="">
+                                    <div class="icons">
+                                        <div class="used-lang">
+                                            &lt;&nbsp;&nbsp;&nbsp;
+                                            <i class="fab fa-js-square js"></i>
+                                            <i class="fab fa-html5 html"></i>
+                                            <i class="fab fa-css3-alt css"></i>
+                                            &sol;&gt;
+                                        </div>
+                                        <div>
+                                            <span>Git|</span>
+                                            <a href="https://github.com/Jay-yoon10/MorseCode_Project">
+                                            <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="box img">
                                     <div class="text">Book Search</div>
-                                     <img src="./img/booksearch.png" alt="">
-                                    <i class="fas fa-play"></i>
-                                    <a href="https://github.com/Jay-yoon10/GoogleBookApi">
-                                    <i class="fas fa-code"></i>
-                                    </a>
+                                    <img src="./img/booksearch.png" alt="">
+                                    <div class="icons">
+                                        <div class="used-lang">
+                                            &lt;&nbsp;&nbsp;&nbsp;
+                                            <i class="fab fa-js-square js"></i>
+                                            <i class="fab fa-html5 html"></i>
+                                            <i class="fab fa-css3-alt css"></i>
+                                            &sol;&gt;
+                                        </div>
+                                        <div>
+                                            <span>Git|</span>
+                                            <a href="https://github.com/Jay-yoon10/GoogleBookApi">
+                                            <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="box img">
                                     <div class="text">eCommerce</div>
                                     <img src="./img/ecommerce.png" alt="">
-                                    <i class="fas fa-play"></i>
-                                    <a href="https://github.com/Jay-yoon10/eCommerce">
-                                    <i class="fas fa-code"></i>
-                                    </a>
+                                    <div class="icons">
+                                        <div class="used-lang">
+                                            &lt;&nbsp;&nbsp;&nbsp;
+                                            <i class="fab fa-js-square js"></i>
+                                            <i class="fab fa-html5 html"></i>
+                                            <i class="fab fa-css3-alt css"></i>
+                                            <i class="fab fa-react react"></i>
+                                            &sol;&gt;
+                                        </div>
+                                        <div>
+                                            <span>Git|</span>
+                                            <a href="https://github.com/Jay-yoon10/eCommerce">
+                                            <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -169,43 +218,43 @@
 
                 <!-- skills section -->
                 <section class="skills" id="skills">
-                    <div class="section-div tech">
+                    <div class="section-div skill">
                         <h2 class="title" id="skills--title">My skills</h2>
-                        <div class="tech-box">
+                        <div class="skill-box">
                             <div class="row">
                                 <div class="tooltip amazon">
-                                    <span class="tech-box__icon aws">
+                                    <span class="skill-box__icon aws">
                                         AWS|Certifed Solutions Architect
                                         Associate</span
                                     >
                                     <i class="fab fa-aws"></i>
                                 </div>
                                 <div class="tooltip javascript">
-                                    <span class="tech-box__icon js">
+                                    <span class="skill-box__icon js">
                                         JavaScript</span
                                     >
                                     <i class="fab fa-js"></i>
                                 </div>
                                 <div class="tooltip database">
-                                    <span class="tech-box__icon sql"> SQL</span>
+                                    <span class="skill-box__icon sql"> SQL</span>
                                     <i class="fas fa-database"></i>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="tooltip html5">
-                                    <span class="tech-box__icon html">
+                                    <span class="skill-box__icon html">
                                         HTML5</span
                                     >
                                     <i class="fab fa-html5"></i>
                                 </div>
                                 <div class="tooltip scss">
-                                    <span class="tech-box__icon css">
+                                    <span class="skill-box__icon css">
                                         CSS|SCSS</span
                                     >
                                     <i class="fab fa-css3"></i>
                                 </div>
                                 <div class="tooltip operation">
-                                    <span class="tech-box__icon os">
+                                    <span class="skill-box__icon os">
                                         MacOS|Windows</span
                                     >
                                     <i class="fab fa-windows"></i>
@@ -213,17 +262,17 @@
                             </div>
                             <div class="row">
                                 <div class="tooltip java">
-                                    <span class="tech-box__icon jv"> JAVA</span>
+                                    <span class="skill-box__icon jv"> JAVA</span>
                                     <i class="fab fa-java"></i>
                                 </div>
                                 <div class="tooltip github">
-                                    <span class="tech-box__icon git">
+                                    <span class="skill-box__icon git">
                                         Git|GitHub</span
                                     >
                                     <i class="fab fa-github"></i>
                                 </div>
                                 <div class="tooltip react">
-                                    <span class="tech-box__icon rt">
+                                    <span class="skill-box__icon rt">
                                         REACT</span
                                     >
                                     <i class="fab fa-react"></i>
@@ -232,7 +281,6 @@
                         </div>
                     </div>
                 </section>
-
                 <!-- contact section -->
                 <section class="contact" id="contact">
                     <div class="contact__div section-div">
@@ -241,7 +289,7 @@
                             <div class="contact__div--content column left">
                                 <div class="text">Get in Touch</div>
                                 <p>
-                                    Feel free to contact me for collarboration or work!.
+                                    Feel free to contact me for collarboration or work!
                                 </p>
                                 <div class="icons">
                                     <div class="icons-box1">
@@ -276,7 +324,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                             <a class="a_style" href="https://github.com/Jay-yoon10" target="_blank" rel="noopener noreferrer">
+                                            <a class="a_style" href="https://github.com/Jay-yoon10" target="_blank" rel="noopener noreferrer">
                                             <i class="fab fa-github-square git"></i>
                                             </a>
                                             <div class="info">
@@ -298,60 +346,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="contact__div--content column right"> -->
-                                <!-- <div class="text">Contact me</div>
-                                <form action="#">
-                                    <div class="fields">
-                                        <div class="field name">
-                                            <input
-                                                type="text"
-                                                placeholder="Name"
-                                                required
-                                            />
-                                        </div>
-                                        <div class="field email">
-                                            <input
-                                                type="email"
-                                                placeholder="Email"
-                                                required
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <input
-                                            type="text"
-                                            placeholder="Subject"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="field textarea">
-                                        <textarea
-                                            cols="30"
-                                            rows="10"
-                                            placeholder="Message...."
-                                            required
-                                        ></textarea>
-                                    </div>
-                                    <div class="button-area">
-                                        <button type="submit">
-                                            Send message
-                                        </button>
-                                    </div>
-                                </form> -->
-                            <!-- </div> -->
                         </div>
                     </div>
                 </section>
-         
+            </div>
+        </div>
+    </main>
         <!-- footer section -->
         <footer>
             <span
                 >Created By Jay Yoon |
-                <span class="far fa-copyright"></span> 2021 All rights
-            >
+                <span class="far fa-copyright"></span> 2022 All rights.
+            
         </footer>
-   </div>
-        </div>
         <script src="script.js"></script>
     </body>
 </html>

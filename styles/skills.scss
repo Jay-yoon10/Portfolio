@@ -1,0 +1,141 @@
+/* skills section styling */
+@use "../partials/color.scss" as color;
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+
+    width: 100%;
+    height: 110vh;
+}
+.skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    justify-content: center;
+}
+.row {
+    margin: 30px;
+}
+
+.tooltip {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.skill-box__icon {
+    background-color: #fff;
+    position: absolute;
+    bottom: 80%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 30px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.skill-box__icon::after {
+    content: "";
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    margin-left: 5%;
+}
+.skill i {
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 10%;
+    color: #fff;
+    font-size: 70px;
+    margin: 40px;
+}
+
+.tooltip:hover .skill-box__icon {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.github:hover i {
+    background-color: #211f1f;
+}
+.git {
+    background-color: #211f1f;
+    color: whitesmoke;
+}
+.javascript:hover i {
+    background-color: #323330;
+    color: #f0db4f;
+}
+.js {
+    color: #f0db4f;
+    background-color: #323330;
+}
+.java:hover i {
+    background-color: #5382a1;
+    color: #f89820;
+}
+.jv {
+    background-color: #5382a1;
+    color: #f89820;
+}
+.react:hover i {
+    color: #60dafb;
+    background-color: #1f232a;
+}
+.rt {
+    color: #60dafb;
+    background-color: #1f232a;
+}
+.amazon:hover i {
+    color: #ff9900;
+    background-color: #232f3e;
+}
+.aws {
+    color: #ff9900;
+    background-color: #232f3e;
+    text-align: center;
+}
+.operation:hover i {
+    background-color: #ffb900;
+    color: #00a4ef;
+}
+.os {
+    color: #f25022;
+    background-color: #7fba00;
+}
+.database:hover i {
+    background-color: #f29111;
+    color: #00758f;
+}
+.sql {
+    color: #00758f;
+    background-color: #f29111;
+}
+.html5:hover i {
+    background-color: #e34c26;
+    color: #ebebeb;
+}
+.html {
+    background-color: #e34c26;
+    color: #ebebeb;
+}
+.scss:hover i {
+    background-color: #3c99dc;
+    color: #d5f3fe;
+}
+.css {
+    color: #3c99dc;
+    background-color: #d5f3fe;
+}
+
+#skills--title {
+    color: color.$secondary-color;
+}

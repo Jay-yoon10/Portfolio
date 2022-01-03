@@ -1,0 +1,17 @@
+@use "../partials/color.scss" as color;
+/* footer section styling */
+footer {
+    background: #111;
+    padding: 15px 23px;
+    color: color.$secondary-color;
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+}
+footer span a {
+    color: color.$primary-color;
+    text-decoration: none;
+}
+footer span a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,124 @@
+@use "../partials/color.scss" as color;
+
+/* project section styling */
+
+.projects,
+.skills,
+.teams {
+    color: color.$secondary-color;
+    background: #111;
+}
+.projects .title::before,
+.teams .title::before {
+    background: color.$secondary-color;
+}
+.projects .title::after,
+.teams .title::after {
+    background: #111;
+}
+.projects {
+    &__div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        &--content {
+            display: flex;
+            overflow-x: hidden;
+            overflow-y: auto;
+            .card {
+                background: #222;
+                text-align: center;
+                border-radius: 6px;
+                padding: 10px 25px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 30px;
+                margin-right: 50px;
+                height: 600px;
+                width: 450px;
+
+                .box {
+                    transition: all 0.3s ease;
+                    .icons {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+                    img {
+                        height: 350px;
+                        border-radius: 8px;
+                    }
+                    .used-lang {
+                        font-size: 30px;
+                        .js {
+                            color: #f0db4f;
+                            background-color: transparent;
+                        }
+                        .html {
+                            background-color: transparent;
+                            color: #e34c26;
+                        }
+                        .css {
+                            color: #3c99dc;
+                            background-color: transparent;
+                        }
+                        .react {
+                            color: #60dafb;
+                            background-color: transparent;
+                        }
+                        i {
+                            font-size: 50px;
+                        }
+                    }
+                }
+                span {
+                    font-size: 20px;
+                    color: whitesmoke;
+                }
+                i {
+                    font-size: 30px;
+                    margin-top: 25px;
+                    margin-right: 10px;
+                    color: whitesmoke;
+                    background-color: transparent;
+                    transition: color 0.3s ease;
+                }
+                .text {
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin: 15px;
+                }
+            }
+            .card:hover {
+                background: color.$primary-color;
+                i {
+                    color: color.$secondary-color;
+                }
+                .box {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+.slider {
+    max-width: 1500px;
+    display: flex;
+}
+.slider .card {
+    flex: 1;
+    margin: 0 10px;
+}
+.slider .card .img {
+    height: 400px;
+    width: 100%;
+}
+.slider .card .img img {
+    // height: 100%;
+    // // width: 100%;
+    object-fit: cover;
+}
+.slider .card .content {
+    padding: 10px 20px;
+}

@@ -1,0 +1,58 @@
+/* navbar styling */
+@use "../partials/color.scss" as color;
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.3s ease;
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--menu-btn {
+            color: color.$secondary-color;
+            font-size: 23px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+    &__logo a {
+        color: color.$secondary-color;
+        font-size: 35px;
+        font-weight: 600;
+        & span {
+            color: color.$primary-color;
+            transition: all 0.3s ease;
+        }
+    }
+    .menu li {
+        list-style: none;
+        display: inline-block;
+        a {
+            display: block;
+            color: color.$secondary-color;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 25px;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: color.$primary-color;
+        }
+    }
+}
+.navbar.unchanged {
+    padding: 15px 0;
+    background: color.$primary-color;
+}
+
+.navbar.unchanged .logo a span {
+    color: color.$secondary-color;
+}
+.navbar.unchanged .menu li a:hover {
+    color: color.$secondary-color;
+}

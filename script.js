@@ -15,15 +15,12 @@ $(document).ready(function () {
         }
     });
 
-    // slide-up script
     $(".scroll-up-btn").click(function () {
         $("html").animate({ scrollTop: 0 });
-        // removing smooth scroll on slide-up button click
         $("html").css("scrollBehavior", "auto");
     });
 
     $(".navbar .menu li a").click(function () {
-        // applying again smooth scroll on menu items click
         $("html").css("scrollBehavior", "smooth");
     });
 
@@ -50,6 +47,25 @@ $(document).ready(function () {
 
     // owl carousel script
     $(".slider").owlCarousel({
+        items: 3,
+        // itemsDesktop: [1400, 4],
+        responsive: {
+            0: {
+                items: 1,
+            },
+            400: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 3,
+            },
+            1200: {
+                items: 3,
+            },
+        },
         loop: true,
         autoplay: true,
         autoplayTimeout: 3000,

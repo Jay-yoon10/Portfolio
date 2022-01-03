@@ -1,0 +1,59 @@
+@use "../partials/color.scss" as color;
+
+/* about section styling */
+.about {
+    &__div {
+        &--content {
+            .left {
+                width: 45%;
+
+                img {
+                    height: 450px;
+                    width: 400px;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }
+            }
+            .right {
+                width: 55%;
+                a {
+                    display: inline-block;
+                    background: color.$primary-color;
+                    color: color.$secondary-color;
+                    font-size: 25px;
+                    font-weight: 500;
+                    padding: 10px 30px;
+                    margin-top: 20px;
+                    border-radius: 6px;
+                    border: 2px solid color.$primary-color;
+                    transition: all 0.3s ease;
+                }
+                a:hover {
+                    color: color.$primary-color;
+                    background: none;
+                }
+                p {
+                    text-align: justify;
+                    color: color.$secondary-color;
+                    font-size: 20px;
+                }
+                .p1 {
+                    text-indent: 30px;
+                }
+                .text {
+                    font-size: 25px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.span-left {
+    color: color.$primary-color;
+}
+
+.span-right {
+    color: color.$secondary-color;
+}

@@ -1,0 +1,69 @@
+@use "../partials/color.scss" as color;
+/* home section styling */
+.home {
+    display: flex;
+    height: 100vh;
+    color: color.$secondary-color;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Ubuntu", sans-serif;
+    &__div {
+        width: 100%;
+        display: flex;
+        .row {
+            margin-right: 0;
+        }
+        &--content a {
+            display: inline-block;
+            background: color.$primary-color;
+            color: color.$secondary-color;
+            font-size: 25px;
+            padding: 12px 36px;
+            margin-top: 20px;
+            font-weight: 400;
+            border-radius: 6px;
+            border: 2px solid color.$primary-color;
+            transition: all 0.3s ease;
+        }
+        &--content a:hover {
+            color: color.$primary-color;
+            background: none;
+        }
+        &--content-text1 {
+            font-size: 27px;
+        }
+        &--content-text2 {
+            font-size: 75px;
+            font-weight: 600;
+            margin-left: -3px;
+        }
+        &--content-text3 {
+            font-size: 40px;
+            margin: 5px 0;
+            span {
+                animation: pulsate 5s ease-out infinite alternate;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@keyframes pulsate {
+    20% {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.719),
+            0 0 11px color.$secondary-color, 0 0 19px color.$secondary-color,
+            0 0 20px rgba(255, 255, 255, 0.719),
+            0 0 20px rgba(255, 255, 255, 0.719),
+            0 0 26px rgba(255, 255, 255, 0.719),
+            0 0 30px rgba(255, 255, 255, 0.719),
+            0 0 35px rgba(255, 255, 255, 0.719);
+    }
+
+    5% {
+        text-shadow: 0 0 4px color.$secondary-color,
+            0 0 10px color.$secondary-color, 0 0 18px color.$secondary-color,
+            0 0 38px #062c43, 0 0 73px #530f1e, 0 0 80px #a44322,
+            0 0 94px #f8bc04, 0 0 1200px #76101e;
+    }
+}
