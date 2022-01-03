@@ -910,13 +910,10 @@ section .title {
     width: 100%;
   }
 
-  .skill {
-    transform: scale(0.5);
-  }
-
   .skill-box {
     display: flex;
     flex-wrap: nowrap;
+    transform: scale(0.5);
   }
 
   .contact {
