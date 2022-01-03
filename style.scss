@@ -96,12 +96,11 @@ section .title {
     .section-div {
         padding: 0 50px;
     }
-    .skill {
-        transform: scale(0.7);
-    }
+
     .skill-box {
         display: flex;
         flex-wrap: nowrap;
+        transform: scale(0.7);
     }
 }
 @media (max-width: 947px) {
