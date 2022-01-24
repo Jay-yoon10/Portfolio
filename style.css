@@ -380,6 +380,10 @@ footer span a:hover {
   color: #60dafb;
   background-color: transparent;
 }
+.projects__div--content .card .box .used-lang .java {
+  background-color: transparent;
+  color: #f89820;
+}
 .projects__div--content .card .box .used-lang i {
   font-size: 50px;
 }
