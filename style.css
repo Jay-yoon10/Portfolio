@@ -360,6 +360,7 @@ footer span a:hover {
 .projects__div--content .card .box img {
   height: 350px;
   border-radius: 8px;
+  padding: 10px;
 }
 .projects__div--content .card .box .used-lang {
   font-size: 30px;
@@ -464,6 +465,7 @@ footer span a:hover {
   justify-content: center;
   font-weight: 400;
   margin-right: 40px;
+  text-align: center;
   cursor: pointer;
 }
 
