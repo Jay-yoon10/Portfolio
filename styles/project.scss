@@ -3,17 +3,16 @@
 /* project section styling */
 
 .projects,
-.skills,
-.teams {
+.skills {
     color: color.$secondary-color;
-    background: #111;
+    // background: #111;
 }
 .projects .title::before,
-.teams .title::before {
+.title::before {
     background: color.$secondary-color;
 }
 .projects .title::after,
-.teams .title::after {
+.title::after {
     background: #111;
 }
 .projects {

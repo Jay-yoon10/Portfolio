@@ -282,6 +282,13 @@ section .title {
                         font-size: 13px;
                         text-align: center;
                     }
+                    a {
+                        display: flex;
+                        // align-items: center;
+                        justify-content: center;
+                        max-width: 70%;
+                        margin-left: 15%;
+                    }
                 }
             }
         }

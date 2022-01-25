@@ -2,7 +2,7 @@
 /* contact section styling */
 
 #contact-title {
-    color: color.$primary-color;
+    color: color.$secondary-color;
 }
 .contact {
     display: flex;
@@ -38,8 +38,9 @@
                 .info {
                     .sub-title {
                         font-weight: 500;
-                        color: #222;
+                        color: color.$secondary-color;
                         margin-left: 20px;
+                        font-size: larger;
                     }
                 }
                 .email-info {
@@ -47,9 +48,9 @@
                     justify-content: center;
                 }
                 i {
-                    font-size: 25px;
+                    font-size: 40px;
                     color: color.$primary-color;
-                    background-color: #fff;
+                    background-color: transparent;
                 }
             }
             .right {

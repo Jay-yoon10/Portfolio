@@ -36,7 +36,7 @@
 .stars,
 .twinkling {
   width: auto;
-  height: 400vh;
+  height: 800vh;
 }
 
 .stars {
@@ -310,19 +310,17 @@ footer span a:hover {
 
 /* project section styling */
 .projects,
-.skills,
-.teams {
+.skills {
   color: #f1faee;
-  background: #111;
 }
 
 .projects .title::before,
-.teams .title::before {
+.title::before {
   background: #f1faee;
 }
 
 .projects .title::after,
-.teams .title::after {
+.title::after {
   background: #111;
 }
 
@@ -601,7 +599,7 @@ footer span a:hover {
 
 /* contact section styling */
 #contact-title {
-  color: #06d6a0;
+  color: #f1faee;
 }
 
 .contact {
@@ -638,17 +636,18 @@ footer span a:hover {
 }
 .contact__div--content .row .info .sub-title {
   font-weight: 500;
-  color: #222;
+  color: #f1faee;
   margin-left: 20px;
+  font-size: larger;
 }
 .contact__div--content .row .email-info {
   display: flex;
   justify-content: center;
 }
 .contact__div--content .row i {
-  font-size: 25px;
+  font-size: 40px;
   color: #06d6a0;
-  background-color: #fff;
+  background-color: transparent;
 }
 .contact__div--content .right form .fields {
   display: flex;
@@ -990,5 +989,11 @@ section .title {
   .about__div--content .right p {
     font-size: 13px;
     text-align: center;
+  }
+  .about__div--content .right a {
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+    margin-left: 15%;
   }
 }
