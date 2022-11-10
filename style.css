@@ -40,17 +40,13 @@
 }
 
 .stars {
-  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  background: #000 url("../img/stars.png") repeat top center;
   z-index: 0;
 }
 
 .twinkling {
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background: transparent url("../img/twinkling.png") repeat top center;
   z-index: 1;
-  -moz-animation: move-twink-back 200s linear infinite;
-  -ms-animation: move-twink-back 200s linear infinite;
-  -o-animation: move-twink-back 200s linear infinite;
-  -webkit-animation: move-twink-back 200s linear infinite;
   animation: move-twink-back 200s linear infinite;
 }
 
@@ -770,17 +766,14 @@ section .title {
     height: 350px;
     width: 350px;
   }
-
   .skill-box {
     display: flex;
     flex-wrap: nowrap;
   }
-
   .contact {
     transform: scale(0.9);
     justify-content: center;
   }
-
   .about__div--content .right .text {
     text-align: center;
   }
@@ -793,11 +786,9 @@ section .title {
   section .title {
     font-size: 40px;
   }
-
   .section-div {
     padding: 0 50px;
   }
-
   .skill-box {
     display: flex;
     flex-wrap: nowrap;
@@ -809,11 +800,9 @@ section .title {
     display: block;
     z-index: 999;
   }
-
   .menu-btn i.active:before {
     content: "\f00d";
   }
-
   .navbar .menu {
     position: fixed;
     height: 100vh;
@@ -825,63 +814,50 @@ section .title {
     padding-top: 80px;
     transition: all 0.3s ease;
   }
-
   .navbar .menu.active {
     left: 0;
   }
-
   .navbar .menu li {
     display: block;
   }
-
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
   }
-
   .home .home__div--content .text-2 {
     font-size: 70px;
   }
-
   .home .home__div--content .text-3 {
     font-size: 35px;
   }
-
   .home .home__div--content a {
     font-size: 23px;
     padding: 10px 30px;
   }
-
   .section-div {
     max-width: 930px;
   }
-
   .about .about__div--content .column {
     width: 100%;
   }
-
   .about .about__div--content .left {
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
   }
-
   .about .about__div--content .right {
     flex: 100%;
   }
-
   .projects .projects__div--content .card {
     width: 100%;
     margin-bottom: 20px;
   }
-
   .skills .skills-content .column,
-.contact .contact__div--content .column {
+  .contact .contact__div--content .column {
     width: 100%;
     margin-bottom: 35px;
   }
-
   .contact {
     transform: scale(0.75);
     justify-content: center;
@@ -891,38 +867,30 @@ section .title {
   section .title {
     font-size: 35px;
   }
-
   .section-div {
     padding: 0 23px;
   }
-
   .home .home__div--content .text-2 {
     font-size: 60px;
   }
-
   .home .home__div--content .text-3 {
     font-size: 32px;
   }
-
   .home .home__div--content a {
     font-size: 20px;
   }
-
   .projects .projects__div--content .card {
     width: 100%;
   }
-
   .skill-box {
     display: flex;
     flex-wrap: nowrap;
     transform: scale(0.5);
   }
-
   .contact {
     transform: scale(0.6);
     justify-content: center;
   }
-
   .about__div--content .right .text {
     text-align: center;
   }
@@ -935,38 +903,30 @@ section .title {
   section .title {
     font-size: 30px;
   }
-
   .home .home__div--content .text-2 {
     font-size: 50px;
   }
-
   .home .home__div--content .text-3 {
     font-size: 27px;
   }
-
   .about .about__div--content .right .text,
-.skills .skills-content .left .text {
+  .skills .skills-content .left .text {
     font-size: 19px;
   }
-
   .contact .right form .fields {
     flex-direction: column;
   }
-
   .contact .right form .name,
-.contact .right form .email {
+  .contact .right form .email {
     margin: 0;
   }
-
   .contact {
     transform: scale(0.5);
     justify-content: center;
   }
-
   .right form .error-box {
     width: 150px;
   }
-
   .scroll-up-btn {
     right: 15px;
     bottom: 15px;
@@ -975,14 +935,12 @@ section .title {
     font-size: 23px;
     line-height: 38px;
   }
-
   .projects__div--content .card .box .used-lang {
     font-size: 15px;
   }
   .projects__div--content .card i {
     transform: scale(0.5);
   }
-
   .about__div--content .right .text {
     text-align: center;
   }
@@ -997,3 +955,5 @@ section .title {
     margin-left: 15%;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
