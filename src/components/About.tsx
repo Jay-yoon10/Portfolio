@@ -63,7 +63,7 @@ export default function About() {
             <div className="relative group">
               <div className="relative w-56 h-64 sm:w-60 sm:h-72 rounded overflow-hidden">
                 <Image
-                  src="/img/myPhoto.jpg"
+                  src="/Portfolio/img/myPhoto.jpg"
                   alt="Jay Yoon"
                   fill
                   className="object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
